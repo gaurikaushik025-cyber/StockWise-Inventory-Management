@@ -40,6 +40,56 @@ Users can add, view, search, update and delete products. The system also calcula
 - Visual Studio Code
 - Git
 - GitHub
+### How to Run the Project
+## 1. Open the project
+Open the StockWise folder in Visual Studio Code.
+## 2. Open the backend terminal
+cd backend
+## 3. Create a virtual environment
+python -m venv venv
+## 4. Activate the virtual environment
+For Windows:
+venv\Scripts\activate
+
+## 5. Install required packages
+pip install -r requirements.txt
+## 6. Start the Flask backend
+python app.py
+
+The backend will run at:
+http://127.0.0.1:5000
+## 7. Start the frontend
+Open:
+frontend/index.html
+
+using VS Code Live Server.
+The frontend will normally open at:
+http://127.0.0.1:5500/frontend/index.html
+
+API Endpoints
+Method	Endpoint	Description
+GET	/api/products	Get all products
+POST	/api/products	Add a product
+GET	/api/products/search?q=	Search products
+PUT	/api/products/<id>	Update a product
+DELETE	/api/products/<id>	Delete a product
+
+
+### Low Stock Detection
+Products with a quantity of 5 or less are displayed with a Low Stock status.
+Validation
+The application validates product information such as:
+- Required fields
+- Product ID uniqueness
+- Non-negative quantity
+- Non-negative price    
+Database
+StockWise uses SQLite to store product inventory data.
+### Author
+## Gauri Kaushik
+## Roll no. :18
+## Electronics and Communication Engineering(M2)
+## Ramdeobaba University, Nagpur
 
 ## Project Structure
 
@@ -59,56 +109,4 @@ StockWise/
     ├── index.html
     ├── style.css
     └── script.js
-    How to Run the Project
-1. Open the project
-Open the StockWise folder in Visual Studio Code.
-2. Open the backend terminal
-cd backend
-
-3. Create a virtual environment
-python -m venv venv
-
-4. Activate the virtual environment
-For Windows:
-venv\Scripts\activate
-
-5. Install required packages
-pip install -r requirements.txt
-
-6. Start the Flask backend
-python app.py
-
-The backend will run at:
-http://127.0.0.1:5000
-
-7. Start the frontend
-Open:
-frontend/index.html
-
-using VS Code Live Server.
-The frontend will normally open at:
-http://127.0.0.1:5500/frontend/index.html
-
-API Endpoints
-Method	Endpoint	Description
-GET	/api/products	Get all products
-POST	/api/products	Add a product
-GET	/api/products/search?q=	Search products
-PUT	/api/products/<id>	Update a product
-DELETE	/api/products/<id>	Delete a product
-
-
-Low Stock Detection
-Products with a quantity of 5 or less are displayed with a Low Stock status.
-Validation
-The application validates product information such as:
-- Required fields
-- Product ID uniqueness
-- Non-negative quantity
-- Non-negative price
-Database
-StockWise uses SQLite to store product inventory data.
-Author
-Gauri Kaushik
-Roll no. : 18
-Electronics and Communication Engineering(M2)
+    
